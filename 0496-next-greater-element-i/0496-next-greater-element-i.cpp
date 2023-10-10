@@ -6,20 +6,18 @@ public:
         int m=nums2.size();
         for(int i = 0 ;i<n;i++){
             int idx=0;
-            int flag=1;
+            // int flag=1;
             for(int j =0 ;j<m;j++){
                 if(nums1[i]==nums2[j]){
                     idx=j;
-                    flag=0;                     
+                    // flag=0;                     
                 }
             }   
-            if(flag==0){
-                int f=1;
+            if(idx!=-1){
                 int curr=-1;
                 for(int k=idx+1;k<m;k++){
                     if(nums2[idx]<nums2[k]){
                         curr=nums2[k];
-                        f=0;
                         break;
                     }   
                 }
